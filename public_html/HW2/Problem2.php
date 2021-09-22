@@ -12,7 +12,7 @@ function getTotal($arr) {
 
     }
     //TODO do rounding stuff here
-    
+    $total = round($total,2);
 
 
     echo "The total is " . var_export($total, true);
