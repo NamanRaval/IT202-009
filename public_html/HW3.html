@@ -11,7 +11,10 @@
             var x = document.getElementsByTagName("a");
             var i;
             for (i = 0; i < x.length; i++) {
-                x[i].onclick=updateCurrentPage(x);
+                console.log(x);
+                const v=x[i]
+                x[i].onclick =function(){
+                    updateCurrentPage(v.innerHTML);}
                          
             }
         });
