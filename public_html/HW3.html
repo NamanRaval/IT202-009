@@ -31,12 +31,13 @@
     </script>
     <style>
         /* TODO: make edits here */
-        ul li{
+        nav li{
             display: inline;
             font-size: large;
+            padding: 0.2rem;
         }
 
-        ul {
+        ul li{
             list-style: none;
         }
 
@@ -52,8 +53,12 @@
             color: red; 
         }
 
-        ul li::before {
+        li::before {
             content: "✓";
+        }
+
+        nav{
+            list-style-type: none;
         }
 
         h1,
