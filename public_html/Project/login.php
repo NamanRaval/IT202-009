@@ -29,19 +29,23 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     //TODO 3: validate/use
     $errors = [];
     if (empty($email)) {
-        array_push($errors, "Email must be set");
+        flash("Email must be set");
+        $hasErrors = true;
     }
     //sanitize
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     //validate
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        array_push($errors, "Invalid email address");
+        flash("Invalid email address");
+        $hasErrors = true;
     }
     if (empty($password)) {
-        array_push($errors, "Password must be set");
+        flash("Password must be set");
+        $hasErrors = true;
     }
     if (strlen($password) < 8) {
-        array_push($errors, "Password must be 8 or more characters");
+        flash("Password must be 8 or more characters");
+        $hasErrors = true;
     }
     if (count($errors) > 0) {
         echo "<pre>" . var_export($errors, true) . "</pre>";
@@ -73,3 +77,8 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     }
 }
 ?>
+
+<?php
+require(__DIR__."/../../partials/flash.php”);
+?>
+
