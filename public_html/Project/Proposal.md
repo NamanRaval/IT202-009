@@ -30,8 +30,10 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/b38fcbbec5617a62e97b1f2b4b3bc361.png 
+            - Screenshot #2: https://i.gyazo.com/a557445545d5696796860c8a6039d544.png
+                - Screenshot #1 Description: This screenshot shows all of the fields that are required to register a new account. 
+                - Screenshot #2 Description: This screenshot shows the error message that will pop up for the user if the passwords do not match or if the username is not alphanumeric. 
 
     - [ ] (10/12/2021) User will be able to login to their account (given they enter the correct credentials)
         -  List of Evidence of Feature Completion
@@ -40,8 +42,10 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/4fb4355182790a2565ded43fa19ba6a0.png
+            - Screenshot #2: https://i.gyazo.com/2f68c57c4cbd9d715d44838f11aae845.png
+                - Screenshot #1 Description: This screenshot shows what the login page looks like with the correct credentials entered. 
+                - Screenshot #2 Description: This screenshot shows what is looks like after the login button is pressed. 
 
     - [ ] (10/12/2021) User will be able to logout
         -  List of Evidence of Feature Completion
@@ -50,8 +54,10 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/257c7dd514a948ea64530dce2c5a1394.png
+            - Screenshot #2: https://i.gyazo.com/0dfc0cff49959c846b7f19af8c35f2c1.png 
+                - Screenshot #1 Description: This screenshot shows that there is a logout button in the top right corner that is available once the user logs in. 
+                - Screenshot #2 Description: This screenshot shows what happens after the logout button is pressed. It takes you back to the login screen. 
 
     - [ ] (10/12/2021) Basic security rules implemented
         -  List of Evidence of Feature Completion
@@ -60,8 +66,8 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/9f8986e07eca6bf21613e751614f0791.png 
+                - Screenshot #1 Description: This screenshot shows that only users that logged in successfully will see this page. There is a roles table under the "Welcome" address. 
 
     - [ ] (10/12/2021) Basic Roles implemented
         -  List of Evidence of Feature Completion
@@ -70,8 +76,8 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/07f1ea1153a67ad44649bbabe343d286.png 
+                - Screenshot #1 Description: This screenshot shows the roles table that displays an id, username, and email. 
 
     - [ ] (10/12/2021) Site should have basic styles/theme applied; everything should be styled
         -  List of Evidence of Feature Completion
@@ -80,8 +86,9 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/a0b82204cff3bc08331e4abb84116d5d.png 
+            - Screenshot #2: https://i.gyazo.com/08378a645c06fab46d230e28dcbe3d87.png
+                - Screenshot #1 and #2 Description: These screenshots shows all of the styles that have been implemented on this site. The text is a different color, the background is a different color, the text boxes have a rounded shape to them, the links change color when the mouse hovers over them (couldn't show this in a screenshot), the color outside of the links are changed, and the error messages are also different colors. 
 
     - [ ] (10/12/2021) Any output messages/errors should be “user friendly”
         -  List of Evidence of Feature Completion
@@ -90,8 +97,9 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/08378a645c06fab46d230e28dcbe3d87.png 
+            - Screenshot #2: https://i.gyazo.com/82e96d5919d845ee440014dbd07969e4.png 
+                - Screenshot #1 and #2 Description: These screenshots show the different error messages that pop up when the user makes a mistake. 
 
     - [ ] (10/12/2021) User will be able to see their profile
         -  List of Evidence of Feature Completion
