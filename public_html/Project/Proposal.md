@@ -1,9 +1,11 @@
+
 # Project Name: Simple Bank
 ## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: (Prod Branch of Project Folder)
 ## Project Board Link: 
 ## Website Link: (Heroku Prod of Project folder)
 ## Your Name: Naman Raval
+
 
 <!--
 ### Line item / Feature template (use this for each bullet point)
@@ -23,6 +25,7 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
+
     - [ ] (10/12/2021) User will be able to register a new account
         -  List of Evidence of Feature Completion
             - Status: Completed 
@@ -122,6 +125,7 @@
                 - Screenshot #1 description explaining what you're trying to show
 
     
+
 - Milestone 2
 - Milestone 3
 - Milestone 4
