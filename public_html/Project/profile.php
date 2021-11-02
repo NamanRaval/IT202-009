@@ -12,6 +12,7 @@ if (isset($_POST["save"])) {
     $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
     $db = getDB();
     $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
+}
     try {
         $stmt->execute($params);
     } catch (Exception $e) {
@@ -146,7 +147,7 @@ $username = get_username();
 
             isValid = false;
         }
-        return isValid;
+        return isValid;S
     }
 </script>
 <?php
