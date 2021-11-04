@@ -123,6 +123,9 @@
 
         // Move the target square to a random position
         function moveTarget() {
+            if (score > 0 && score % 10==0){
+                sideLength *= 1.5;
+            } 
         targetX = Math.round(Math.random() * canvas.width - targetLength);
         targetY = Math.round(Math.random() * canvas.height - targetLength)
         }
