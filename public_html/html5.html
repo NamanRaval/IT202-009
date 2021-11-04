@@ -95,7 +95,11 @@
         function startGame() {
             // Reduce the countdown timer ever second
         id = setInterval(function() {
-            countdown--;
+            if (score == 20){
+                countdown += 10;
+            } else {
+                countdown--;
+}
         }, 1000)
         // Stop listening for click events
         canvas.removeEventListener('click', startGame);
