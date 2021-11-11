@@ -1,8 +1,8 @@
 # Project Name: Simple Bank
 ## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
-## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
-## Website Link: (Heroku Prod of Project folder)
+## Github Link: https://github.com/NamanRaval/IT202-009/tree/prod/public_html/Project
+## Project Board Link: https://github.com/NamanRaval/IT202-009/projects/1
+## Website Link: http://nyr2-prod.herokuapp.com/Project/login.php
 ## Your Name: Naman Raval
 
 <!--
@@ -64,7 +64,7 @@
                 - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/141227460-a1bae765-9766-47ab-9292-0ff7953341dd.png)
                   - Screenshot #5: User should see friendly error messages when an account either doesn’t exist or if passwords don’t match.
                 
-    - [ ] (10/12/2021) User will be able to logout
+    - [x] (10/12/2021) User will be able to logout
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php 
@@ -82,27 +82,32 @@
                 - Screenshot #5: 
                   - Screenshot #5: 
 
-    - [ ] (10/12/2021) Basic security rules implemented
+    - [x] (10/12/2021) Basic security rules implemented
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-            - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/admin/list_roles.php
+            - Pull Requests: https://github.com/NamanRaval/IT202-009/pull/26 
+            - PR link #1 
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/9f8986e07eca6bf21613e751614f0791.png 
-                - Screenshot #1 Description: This screenshot shows that only users that logged in successfully will see this page. There is a roles table under the "Welcome" address. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141230634-1a5083c5-96ba-466f-9d9c-66bbf69297c1.png)
+                  - Screenshot #1: Roles Table implemented.   
+                - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141230735-190b4d7f-b88e-4798-b39e-b682a7cb6c44.png)
+                  - Screenshot #2: Function to check if user is logged in and function should be called on appropriate pages that only allow logged in users implemented.
 
-    - [ ] (10/12/2021) Basic Roles implemented
+    - [x] (10/12/2021) Basic Roles implemented
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-            - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/admin/create_role.php 
+            - Pull Requests: 
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/26
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/07f1ea1153a67ad44649bbabe343d286.png 
-                - Screenshot #1 Description: This screenshot shows the roles table that displays an id, username, and email. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141231173-13c811db-7400-4734-9406-1bf4ab4113c8.png)
+                  - Screenshot #1: Have a Roles table	(id, name, description, is_active, modified, created) implemented. 
+                - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141231225-5777cde9-8762-4fe9-bdf0-bd23c60bcbee.png)
+                  - Screenshot #2: Have a User Roles table (id, user_id, role_id, is_active, created, modified) implemented. 
 
-    - [ ] (10/12/2021) Site should have basic styles/theme applied; everything should be styled
+
+    - [x] (10/12/2021) Site should have basic styles/theme applied; everything should be styled
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -113,7 +118,7 @@
             - Screenshot #2: https://i.gyazo.com/08378a645c06fab46d230e28dcbe3d87.png
                 - Screenshot #1 and #2 Description: These screenshots shows all of the styles that have been implemented on this site. The text is a different color, the background is a different color, the text boxes have a rounded shape to them, the links change color when the mouse hovers over them (couldn't show this in a screenshot), the color outside of the links are changed, and the error messages are also different colors. 
 
-    - [ ] (10/12/2021) Any output messages/errors should be “user friendly”
+    - [x] (10/12/2021) Any output messages/errors should be “user friendly”
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -124,7 +129,7 @@
             - Screenshot #2: https://i.gyazo.com/82e96d5919d845ee440014dbd07969e4.png 
                 - Screenshot #1 and #2 Description: These screenshots show the different error messages that pop up when the user makes a mistake. 
 
-    - [ ] (10/12/2021) User will be able to see their profile
+    - [x] (10/12/2021) User will be able to see their profile
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -134,7 +139,7 @@
             - Screenshot #1: https://i.gyazo.com/6fea29a5d1addf372ad6a7202c7da6a3.png 
                 - Screenshot #1 Description: This screenshot shows that the user is able to see their profile. 
 
-    - [ ] (10/12/2021) User will be able to edit their profile
+    - [x] (10/12/2021) User will be able to edit their profile
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
