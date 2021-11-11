@@ -23,12 +23,13 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-    - [x] (10/12/2021) User will be able to register a new account
+    - [x] (11/11/2021) User will be able to register a new account
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/register.php
             - Pull Requests
             - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
+            - PR link #2: https://github.com/NamanRaval/IT202-009/pull/36 
             - Screenshots
               - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141225397-05160a99-09cd-4bd2-8efb-7508cef31616.png)
                 - Screenshot #1: Username, email, password, confirm password implemented. 
@@ -44,9 +45,13 @@
                 - Screenshot #6: Email should be unique implemented.
               - Screenshot #7: ![image](https://user-images.githubusercontent.com/90223403/141226290-3c59a1c5-1e06-4313-a719-e0c05cc04c19.png)
                 - Screenshot #7: Username should be unique implemented.
+              - Screenshot #8: ![image](https://user-images.githubusercontent.com/90223403/141354315-017c984a-a67a-45ce-95e7-e50273ce734d.png)
+                - Screenshot #8: System should let user know if username or email is taken and allow the user to correct the error without wiping/clearing the form implemented.
+              - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/141354851-ec99fc8b-97d1-498a-94d2-5af56f56cde3.png)
+                - Screenshot #6: Validation implemented. 
                 
 
-    - [x] (10/12/2021) User will be able to login to their account (given they enter the correct credentials)
+    - [x] (10/14/2021) User will be able to login to their account (given they enter the correct credentials)
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php
@@ -64,25 +69,21 @@
                 - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/141227460-a1bae765-9766-47ab-9292-0ff7953341dd.png)
                   - Screenshot #5: User should see friendly error messages when an account either doesn’t exist or if passwords don’t match.
                 
-    - [x] (10/12/2021) User will be able to logout
+                
+    - [x] (11/11/2021) User will be able to logout
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php 
             - Pull Requests
             - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
+            - PR link #2: https://github.com/NamanRaval/IT202-009/pull/36
             - Screenshots
                 - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141229690-3e217960-4bff-4dfc-9734-9e25acbf5fe2.png)
                   - Screenshot #1: Session should be destroyed (so the back button doesn’t allow them access back in) implemented. 
-                - Screenshot #2: 
-                  - Screenshot #2: 
-                - Screenshot #3: 
-                  - Screenshot #3:
-                - Screenshot #4:
-                  - Screenshot #4: 
-                - Screenshot #5: 
-                  - Screenshot #5: 
+                - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141371320-575f1114-da9d-4958-86bc-bbd310cb55ef.png)
+                  - Screenshot #2: User should see a message that they’ve successfully logged out implemented and logging out will redirect to login page implemented. 
 
-    - [x] (10/12/2021) Basic security rules implemented
+    - [x] (10/28/2021) Basic security rules implemented
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/admin/list_roles.php
@@ -94,7 +95,7 @@
                 - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141230735-190b4d7f-b88e-4798-b39e-b682a7cb6c44.png)
                   - Screenshot #2: Function to check if user is logged in and function should be called on appropriate pages that only allow logged in users implemented.
 
-    - [x] (10/12/2021) Basic Roles implemented
+    - [x] (10/28/2021) Basic Roles implemented
         -  List of Evidence of Feature Completion
             - Status: Completed 
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/admin/create_role.php 
@@ -107,47 +108,46 @@
                   - Screenshot #2: Have a User Roles table (id, user_id, role_id, is_active, created, modified) implemented. 
 
 
-    - [x] (10/12/2021) Site should have basic styles/theme applied; everything should be styled
+    - [x] (11/10/2021) Site should have basic styles/theme applied; everything should be styled
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/34
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/a0b82204cff3bc08331e4abb84116d5d.png 
-            - Screenshot #2: https://i.gyazo.com/08378a645c06fab46d230e28dcbe3d87.png
-                - Screenshot #1 and #2 Description: These screenshots shows all of the styles that have been implemented on this site. The text is a different color, the background is a different color, the text boxes have a rounded shape to them, the links change color when the mouse hovers over them (couldn't show this in a screenshot), the color outside of the links are changed, and the error messages are also different colors. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141371892-0b2b485e-ab39-4bc0-8c12-460bf738056d.png)
+                  - Screenshot #1: Site should have basic styles/theme applied; everything should be styled implemented. 
 
-    - [x] (10/12/2021) Any output messages/errors should be “user friendly”
+    - [x] (11/11/2021) Any output messages/errors should be “user friendly”
         -  List of Evidence of Feature Completion
-            - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+           - Status: Completed 
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/home.php
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/36 
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/08378a645c06fab46d230e28dcbe3d87.png 
-            - Screenshot #2: https://i.gyazo.com/82e96d5919d845ee440014dbd07969e4.png 
-                - Screenshot #1 and #2 Description: These screenshots show the different error messages that pop up when the user makes a mistake. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141372278-d4205f8f-a9ac-4007-aeb4-aa7a5c3de674.png)
+                  - Screenshot #1: Any output messages/errors should be “user friendly” and no technical errors implemented. 
 
-    - [x] (10/12/2021) User will be able to see their profile
+    - [x] (10/14/2021) User will be able to see their profile
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/profile.php
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/6fea29a5d1addf372ad6a7202c7da6a3.png 
-                - Screenshot #1 Description: This screenshot shows that the user is able to see their profile. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141372450-a1f14cb7-c6f0-431f-b527-653c52c893c1.png)
+                  - Screenshot #1:  User will be able to see their profile implemented. 
 
-    - [x] (10/12/2021) User will be able to edit their profile
+    - [x] (10/14/2021) User will be able to edit their profile
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/profile.php 
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/4434b93ce3aa330a5afaf4f7ac91433f.png 
-                - Screenshot #1 Description: This screenshot shows that the user is able to edit their profile. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141373157-214fc95d-aa81-4d76-ad10-e22e9f336e6b.png)
+                  - Screenshot #1: Changing username/email should properly check to see if it’s available before allowing the change and Allow password reset (only if the existing correct password is provided) implemented. 
+
 
     
 - Milestone 2
