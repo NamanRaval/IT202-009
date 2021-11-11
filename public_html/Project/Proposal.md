@@ -1,11 +1,9 @@
-
 # Project Name: Simple Bank
 ## Project Summary: This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: (Prod Branch of Project Folder)
 ## Project Board Link: 
 ## Website Link: (Heroku Prod of Project folder)
 ## Your Name: Naman Raval
-
 
 <!--
 ### Line item / Feature template (use this for each bullet point)
@@ -25,42 +23,64 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-
-    - [ ] (10/12/2021) User will be able to register a new account
+    - [x] (10/12/2021) User will be able to register a new account
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/register.php
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/b38fcbbec5617a62e97b1f2b4b3bc361.png 
-            - Screenshot #2: https://i.gyazo.com/a557445545d5696796860c8a6039d544.png
-                - Screenshot #1 Description: This screenshot shows all of the fields that are required to register a new account. 
-                - Screenshot #2 Description: This screenshot shows the error message that will pop up for the user if the passwords do not match or if the username is not alphanumeric. 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141225397-05160a99-09cd-4bd2-8efb-7508cef31616.png)
+                - Screenshot #1: Username, email, password, confirm password implemented. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141225572-a592a751-df58-4555-8757-61f9d572180f.png)
+                - Screenshot #2: Email is required and must be validated implemented. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/141225688-092e0db5-270b-4740-a8a6-03ab069c7aae.png)
+                - Screenshot #3: Username is required implemented.
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/141225795-1ca4f6d1-b830-45cf-990d-648f48089213.png)
+                - Screenshot #4: Confirm password’s match implemented. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/141225939-2462a5eb-1dcc-4be1-92f2-5e5e60cec2a9.png)
+                - Screenshot #5: Id, username, email, password (60 characters), created, modified implemented and password must be hashed implemented.
+              - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/141226139-b9141c62-8a0a-47a3-871c-82e4b39f5546.png)
+                - Screenshot #6: Email should be unique implemented.
+              - Screenshot #7: ![image](https://user-images.githubusercontent.com/90223403/141226290-3c59a1c5-1e06-4313-a719-e0c05cc04c19.png)
+                - Screenshot #7: Username should be unique implemented.
+                
 
-    - [ ] (10/12/2021) User will be able to login to their account (given they enter the correct credentials)
+    - [x] (10/12/2021) User will be able to login to their account (given they enter the correct credentials)
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/4fb4355182790a2565ded43fa19ba6a0.png
-            - Screenshot #2: https://i.gyazo.com/2f68c57c4cbd9d715d44838f11aae845.png
-                - Screenshot #1 Description: This screenshot shows what the login page looks like with the correct credentials entered. 
-                - Screenshot #2 Description: This screenshot shows what is looks like after the login button is pressed. 
-
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141227204-7ccbe9ac-0a86-48ba-b237-46f695c1f2f1.png)
+                  - Screenshot #1: User can login with email or username implemented.  
+                - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/141227277-39fd1650-1efb-4424-84c4-1e78a16330bd.png)
+                  - Screenshot #2: Password is required implemented. 
+                - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/141227386-88515e57-2104-4790-aee8-1f7723176cf2.png)
+                  - Screenshot #3: User should see friendly error messages when an account either doesn’t exist or if passwords don’t match.
+                - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/141228497-77f734e0-5fef-4159-84e2-414b65e02772.png)
+                  - Screenshot #4: User will be directed to a landing page upon login implemented. 
+                - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/141227460-a1bae765-9766-47ab-9292-0ff7953341dd.png)
+                  - Screenshot #5: User should see friendly error messages when an account either doesn’t exist or if passwords don’t match.
+                
     - [ ] (10/12/2021) User will be able to logout
         -  List of Evidence of Feature Completion
             - Status: Completed 
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/login.php 
             - Pull Requests
-            - PR link #1 (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/14
             - Screenshots
-            - Screenshot #1: https://i.gyazo.com/257c7dd514a948ea64530dce2c5a1394.png
-            - Screenshot #2: https://i.gyazo.com/0dfc0cff49959c846b7f19af8c35f2c1.png 
-                - Screenshot #1 Description: This screenshot shows that there is a logout button in the top right corner that is available once the user logs in. 
-                - Screenshot #2 Description: This screenshot shows what happens after the logout button is pressed. It takes you back to the login screen. 
+                - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/141229690-3e217960-4bff-4dfc-9734-9e25acbf5fe2.png)
+                  - Screenshot #1: Session should be destroyed (so the back button doesn’t allow them access back in) implemented. 
+                - Screenshot #2: 
+                  - Screenshot #2: 
+                - Screenshot #3: 
+                  - Screenshot #3:
+                - Screenshot #4:
+                  - Screenshot #4: 
+                - Screenshot #5: 
+                  - Screenshot #5: 
 
     - [ ] (10/12/2021) Basic security rules implemented
         -  List of Evidence of Feature Completion
@@ -111,8 +131,8 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/6fea29a5d1addf372ad6a7202c7da6a3.png 
+                - Screenshot #1 Description: This screenshot shows that the user is able to see their profile. 
 
     - [ ] (10/12/2021) User will be able to edit their profile
         -  List of Evidence of Feature Completion
@@ -121,11 +141,10 @@
             - Pull Requests
             - PR link #1 (repeat as necessary)
             - Screenshots
-            - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 description explaining what you're trying to show
+            - Screenshot #1: https://i.gyazo.com/4434b93ce3aa330a5afaf4f7ac91433f.png 
+                - Screenshot #1 Description: This screenshot shows that the user is able to edit their profile. 
 
     
-
 - Milestone 2
 - Milestone 3
 - Milestone 4
