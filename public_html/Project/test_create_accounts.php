@@ -19,3 +19,32 @@ if (!has_role("Admin")) {
 	<input type="number" min="0.00" name="balance" step="0.01"/>
 	<input type="submit" name="save" value="Create"/>
 </form>
+
+<?php
+if (isset($_POST["save"])) {
+  $account_number = $_POST["account_number"];
+  $account_type = $_POST["account_type"];
+  $balance = $_POST["balance"];
+
+  $user = get_user_id();
+  $db = getDB();
+  $stmt = $db->prepare(
+    "INSERT INTO Accounts (account_number, user_id, account_type, balance) VALUES(:account_number, :user, :account_type, :balance)"
+  );
+  $r = $stmt->execute([
+    ":account_number" => $account_number,
+    ":user" => $user,
+    ":account_type" => $account_type,
+    ":balance" => $balance
+  ]);
+  if ($r) {
+    flash("Created successfully with id: " . $db->lastInsertId());
+  } else {
+    $e = $stmt->errorInfo();
+    flash("Error creating: " . var_export($e, true));
+  }
+}
+
+require __DIR__ . "/partials/flash.php";
+
+?>
