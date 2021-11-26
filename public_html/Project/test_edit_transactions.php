@@ -70,3 +70,14 @@ if (isset($_GET["id"])) {
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
   }
   ?>
+  
+<form method="POST">
+	<label>Amount</label>
+	<input type="number" min="0.00" name="amount" step="0.01" value="<?php echo(abs($result["amount"])); ?>"/>
+	<label>Memo</label>
+	<input name="memo" type="text" value="<?php echo($result["memo"]); ?>"/> 
+	<input type="submit" name="save" value="Create"/>
+</form>
+
+<?php require __DIR__ . "/../../partials/flash.php"; ?>
+
