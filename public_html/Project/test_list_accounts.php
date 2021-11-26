@@ -23,3 +23,50 @@ if (isset($_POST["search"]) && !empty($query)) {
   }
 }
 ?>
+
+<form method="POST">
+    <input name="query" placeholder="Search Username" value="<?php echo($query); ?>"/>
+    <input type="submit" value="Search" name="search"/>
+</form>
+<div class="results">
+<?php if (count($results) > 0): ?>
+    <div class="list-group">
+        <?php foreach ($results as $r): ?>
+            <div class="list-group-item">
+                <div>
+                    <div>Account Number:</div>
+                    <div><?php echo($r["account_number"]); ?></div>
+                </div>
+                <div>
+                    <div>Account Type:</div>
+                    <div><?php echo($r["account_type"]); ?></div>
+                </div>
+                <div>
+                    <div>Last Updated:</div>
+                    <div><?php echo($r["last_updated"]); ?></div>
+                </div>
+                <div>
+                    <div>Balance:</div>
+                    <div><?php echo($r["balance"]); ?></div>
+                </div>
+                <div>
+                    <div>Opened:</div>
+                    <div><?php echo($r["opened_date"]); ?></div>
+                </div>
+                <div>
+                    <div>Owner ID:</div>
+                    <div><?php echo($r["user_id"]); ?></div>
+                </div>
+                <div>
+                    <a type="button" href="test_edit_accounts.php?id=<?php echo($r['id']); ?>">Edit</a>
+                    <a type="button" href="test_view_accounts.php?id=<?php echo($r['id']); ?>">View</a>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <p>No results</p>
+<?php endif; ?>
+</div>
+
+<?php require __DIR__ . "/../../partials/flash.php"; ?>
