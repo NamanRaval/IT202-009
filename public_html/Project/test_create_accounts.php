@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . "/partials/nav.php";
+require_once __DIR__ . "/../../partials/nav.php";
 if (!has_role("Admin")) {
   flash("You don't have permission to access this page");
-  die(header("Location: login.php"));
+  die(header("Location: ../login.php"));
 }
 ?> 
 
@@ -29,7 +29,7 @@ if (isset($_POST["save"])) {
   $user = get_user_id();
   $db = getDB();
   $stmt = $db->prepare(
-    "INSERT INTO Accounts (account_number, user_id, account_type, balance) VALUES(:account_number, :user, :account_type, :balance)"
+    "INSERT INTO Accounts (account_number, user_id, account_type, balance) VALUES (:account_number, :user, :account_type, :balance)"
   );
   $r = $stmt->execute([
     ":account_number" => $account_number,
@@ -45,6 +45,5 @@ if (isset($_POST["save"])) {
   }
 }
 
-require __DIR__ . "/partials/flash.php";
-
+require __DIR__ . "/../../partials/flash.php";
 ?>
