@@ -36,7 +36,6 @@ if (isset($_POST["save"])) {
     $check->execute([':q' => $account_number]);
   } while ( $check->rowCount() > 0 );
 
-  //TODO add proper validation/checks
   $account_type = $_POST["account_type"];
 
   $balance = $_POST["balance"];
@@ -44,7 +43,6 @@ if (isset($_POST["save"])) {
     die(flash("Minimum balance not deposited."));
   }
 
-  //calc
   $user = get_user_id();
   $stmt = $db->prepare(
     "INSERT INTO Accounts (account_number, user_id, account_type, balance) VALUES (:account_number, :user, :account_type, :balance)"
