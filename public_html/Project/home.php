@@ -19,7 +19,7 @@ if (is_logged_in(true)) {
         <a class="btn btn-primary" href="<?php echo get_url('test_create_transactions.php');?>" role="button"></i> Deposit</a>
         <a class="btn btn-primary" href="<?php echo get_url('test_create_transactions.php');?>" role="button"></i> Withdraw/Transfer</a>
         <a class="btn btn-primary" href="<?php echo get_url('test_list_accounts.php');?>" role="button"></i> My Accounts</a>
-        <a class="btn btn-primary" href="<?php echo get_url('test_create_accounts.php');?>" role="button"></i> Create Account</a>
+        <a class="btn btn-primary" href="<?php echo get_url('create_account.php');?>" role="button"></i> Create Account</a>
         <a class="btn btn-primary" href="<?php echo get_url('profile.php');?>" role="button"></i> Profile</a>
       </p>
     </div>
