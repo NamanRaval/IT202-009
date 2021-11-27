@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/partials/nav.php";
+require_once __DIR__ . "/../../partials/nav.php";
 if (!is_logged_in()) {
   flash("You don't have permission to access this page");
   die(header("Location: login.php"));
@@ -22,3 +22,20 @@ if (!empty($username)) {
   }
 }
 ?>
+<div class="mt-4">
+    <?php if (count($results) > 0): ?>
+      <?php foreach ($results as $r): ?>
+      <div class="card mb-2">
+        <div class="card-header">Account: <b><?php echo($r["account_number"]); ?></b></div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Type: <?php echo(ucfirst($r["account_type"])); ?></li>
+          <li class="list-group-item">Balance: $<?php echo($r["balance"]); ?></li>
+        </ul>
+      </div>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <p>You don't have any accounts.</p>
+    <?php endif; ?>
+    </div>
+
+<?php require __DIR__ . "/../../partials/flash.php"; ?>
