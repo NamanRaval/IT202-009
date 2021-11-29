@@ -45,3 +45,36 @@ if (isset($_POST["save"])) {
   <li class="nav-item"><a class="nav-link <?php echo $type == 'deposit' ? 'active' : ''; ?>" href="?type=deposit">Deposit</a></li>
   <li class="nav-item"><a class="nav-link <?php echo $type == 'withdraw' ? 'active' : ''; ?>" href="?type=withdraw">Withdraw</a></li>
 </ul> 
+
+<form method="POST">
+  <?php if (count($results) > 0): ?>
+  <div class="form-group">
+    <label for="account">Account</label>
+    <select class="form-control" id="account" name="account">
+      <?php foreach ($results as $r): ?>
+      <option value="<?php echo($r["id"]); ?>">
+        <?php echo($r["account_number"]); ?> | <?php echo($r["account_type"]); ?> | <?php echo($r["balance"]); ?>
+      </option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <?php endif; ?>
+  <div class="form-group">
+    <label for="deposit">Amount</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input type="number" class="form-control" id="deposit" min="0.00" name="balance" step="0.01" placeholder="0.00"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="memo">Memo</label>
+    <textarea class="form-control" id="memo" name="memo" maxlength="250"></textarea>
+  </div>
+  <button type="submit" name="save" value="Do Transaction" class="btn btn-success">Do Transaction</button>
+</form>
+
+<?php 
+require __DIR__ . "/../../partials/flash.php"; 
+?>
