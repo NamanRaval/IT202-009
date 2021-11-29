@@ -17,3 +17,25 @@ $db = getDB();
 $stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id ORDER BY id ASC');
 $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_POST["save"])) {
+    $account = $_POST["account"];
+    $balance = $_POST["balance"];
+    $memo = $_POST["memo"];
+  
+    if($type == 'deposit') {
+      $r = changeBalance($db, 1, $account, 'deposit', $balance, $memo);
+    }
+    if($type == 'withdraw')  {
+      $r = changeBalance($db, $account, 1, 'withdraw', $balance, $memo);
+    }
+  
+    if ($r) {
+      flash("Successfully executed transaction.");
+    } else {
+      flash("Error doing transaction!");
+    }
+  }
+  
+  ?>
+  
