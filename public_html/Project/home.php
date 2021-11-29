@@ -16,8 +16,8 @@ if (is_logged_in(true)) {
       <hr class="my-4">
       <p class="lead">What would you like to do today?</p>
       <p>
-        <a class="btn btn-primary" href="<?php echo get_url('test_create_transactions.php');?>" role="button"></i> Deposit</a>
-        <a class="btn btn-primary" href="<?php echo get_url('test_create_transactions.php');?>" role="button"></i> Withdraw/Transfer</a>
+        <a class="btn btn-primary" href="<?php echo get_url('transaction?type=deposit.php');?>" role="button"></i> Deposit</a>
+        <a class="btn btn-primary" href="<?php echo get_url('transaction?type=withdraw.php');?>" role="button"></i> Withdraw/Transfer</a>
         <a class="btn btn-primary" href="<?php echo get_url('accounts.php');?>" role="button"></i> My Accounts</a>
         <a class="btn btn-primary" href="<?php echo get_url('create_account.php');?>" role="button"></i> Create Account</a>
         <a class="btn btn-primary" href="<?php echo get_url('profile.php');?>" role="button"></i> Profile</a>
