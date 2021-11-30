@@ -98,6 +98,58 @@ function getMessages()
     }
     return array();
 }
+function getURL($path) {
+  if(substr($path, 0, 1) == '/') {
+    return $path;
+  }
+  return $_SERVER['CONTEXT_PREFIX'] . "/IT202/project/$path";
+}
+
+function changeBalance($db, $src, $dest, $type, $balChange, $memo = '') {
+  $stmt = $db->prepare("SELECT balance from Accounts WHERE id = :id");
+  $stmt->execute([":id" => $src]);
+  $srcAcct = $stmt->fetch(PDO::FETCH_ASSOC);
+
+  $stmt->execute([":id" => $dest]);
+  $destAcct = $stmt->fetch(PDO::FETCH_ASSOC);
+
+  $transactions = $db->prepare(
+    "INSERT INTO Transactions (act_src_id, act_dest_id, amount, action_type, memo, expected_total)
+    VALUES (:act_src_id, :act_dest_id, :amount, :action_type, :memo, :expected_total)"
+  );
+  $accounts = $db->prepare(
+    "UPDATE Accounts SET balance = :balance WHERE id = :id"
+  );
+
+  
+  $balChange = abs($balChange);
+  $finalSrcBalace = $srcAcct['balance'] - $balChange;
+  $finalDestBalace = $destAcct['balance'] + $balChange;
+
+  $transactions->execute([
+    ":act_src_id" => $src,
+    ":act_dest_id" => $dest,
+    ":amount" => -$balChange,
+    ":action_type" => $type,
+    ":memo" => $memo,
+    ":expected_total" => $finalSrcBalace
+  ]);
+
+  $transactions->execute([
+    ":act_src_id" => $dest,
+    ":act_dest_id" => $src,
+    ":amount" => $balChange,
+    ":action_type" => $type,
+    ":memo" => $memo,
+    ":expected_total" => $finalDestBalace
+  ]);
+
+  $accounts->execute([":balance" => $finalSrcBalace, ":id" => $src]);
+  $accounts->execute([":balance" => $finalDestBalace, ":id" => $dest]);
+
+  return $transactions;
+}
+
 //TODO generic helpers
 function reset_session()
 {
