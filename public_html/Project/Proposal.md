@@ -151,88 +151,113 @@
 
     
 - Milestone 2
-    - [] (mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+    - [x] (11/24/21) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/54 
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143964677-520659b8-3271-4890-962d-2949a9217c4f.png)
+                - Screenshot #1 Description: Accounts Table created. 
                 
 
-    - [] (mm/dd/yyyy of completion) Project setup steps:
+    - [x] (11/26/21) Project setup steps:
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/test_create_transactions.php 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/55
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143965959-20269249-595a-4e40-b89b-925bec860371.png)
+                - Screenshot #1 Description: World Account created. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143966288-6a4d5727-01b7-4eb4-86b2-02859c95861d.png)
+                - Screenshot #2 Description: System user created. 
                 
-                
-    - [] (mm/dd/yyyy of completion) Create the Transactions table (see reference below)
+    - [x] (11/26/21) Create the Transactions table (see reference below)
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=deposit 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/55
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
-
-    - [] (mm/dd/yyyy of completion) Dashboard page
-        -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-            - Pull Requests
-            - PR link #1: (repeat as necessary)
-            - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
-
-    - [] (mm/dd/yyyy of completion) User will be able to create a checking account
-        -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-            - Pull Requests
-            - PR link #1: (repeat as necessary)
-            - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1:![image](https://user-images.githubusercontent.com/90223403/143964891-0d2430ea-fba8-4d73-9115-d6085f47ca11.png)
+                - Screenshot #1 Description: Transaction table created.
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143965302-ed4b37a3-ebc1-4f52-8185-6bf5e3d8d672.png)
+                - Screenshot #2 Description: Src/Dest, BalanceChange, TransactionType, Memo, ExpectedTotal, Created implemented. 
 
 
-    - [] (mm/dd/yyyy of completion) User will be able to list their accounts
+    - [x] (11/26/21) Dashboard page
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/home.php 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/56
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1:![image](https://user-images.githubusercontent.com/90223403/143966605-4168c973-7173-4c1c-9033-711934df2fbe.png)
+                - Screenshot #1 Description: Dashboard Page implemented. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143966675-115a3f76-5d1a-4fb8-9355-7a45b09bf80d.png)
+                - Screenshot #2 Description: Dashboard display code. 
 
-    - [] (mm/dd/yyyy of completion) User will be able to click an account for more information (a.ka. Transaction History page)
+    - [x] (11/26/21) User will be able to create a checking account
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_account.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/57
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143967086-12ed26cf-cb76-4caa-a711-a4e13dabad65.png)
+                - Screenshot #1 Description: User can create a checking account with minimum $5.00. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143967159-8974d4e0-7c73-4686-96df-a6f62c7be051.png)
+                - Screenshot #2 Description: Random account number. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/143967682-7ebef724-670c-4b82-91c5-fe54be846073.png)
+                - Screenshot #3 Description: Friendly user messages. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/143968028-ada52804-35df-4e6e-aaaf-16e903cf7d42.png)
+                - Screenshot #4 Description: Updated Accounts table. 
 
-    - [] (mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
+
+    - [x] (11/26/21) User will be able to list their accounts
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/58
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143977011-a6382c66-732a-4c35-910b-d79b3e4edaa5.png)
+                - Screenshot #1 Description: Account number, account type and balance implemented on accounts page
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143977266-2886eff8-4a56-4253-8f33-eb825e109b16.png)
+                - Screenshot #2 Description: Limit of 5 accounts on page. 
+
+    - [x] (11/28/21) User will be able to click an account for more information (a.ka. Transaction History page)
+        -  List of Evidence of Feature Completion
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php
+            - Pull Requests
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/59
+            - Screenshots
+              - Screenshot #1:![image](https://user-images.githubusercontent.com/90223403/143977666-114e61ce-eafb-4531-bea8-3f94b91fe859.png)
+                - Screenshot #1 Description: Latest transaction history (10 results). 
+
+    - [x] (11/29/21) User will be able to deposit/withdraw from their account(s)
+        -  List of Evidence of Feature Completion
+            - Status: Completed
+            - Direct Link #1: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=withdraw
+            - Direct Link #2: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=deposit 
+            - Pull Requests
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/60
+            - Screenshots
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143977959-b8044864-11f0-4f86-93dc-741a3c75c342.png)
+                - Screenshot #1 Description: Dropdown for deposit and withdraw. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143978057-f9dfa836-e5eb-42ea-a993-1c46aca93156.png)
+                - Screenshot #2 Description: Account dropdown without world account. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/143978128-741c9691-ae3b-4dfe-a698-c207c5525b20.png)
+                - Screenshot #3 Description: Form to enter deposit amount with memo line. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/143979095-702fe12e-8d7a-4aff-8095-783b0bcb575e.png)
+                - Screenshot #4 Description: All reflected on transaction history page. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/143979199-317f064a-06e0-4387-b838-c29ea005959f.png)
+                - Screenshot #5 Description: Friendly success messages.
+              - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/143979277-d38a537e-35ee-40c9-9ebd-c2703feb4b71.png)
+                - Screenshot #6 Description: Error messages. 
 - Milestone 3
 - Milestone 4
 ### Intructions
