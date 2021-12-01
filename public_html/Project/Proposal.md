@@ -214,6 +214,9 @@
                 - Screenshot #3 Description: Friendly user messages. 
               - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/143968028-ada52804-35df-4e6e-aaaf-16e903cf7d42.png)
                 - Screenshot #4 Description: Updated Accounts table. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/144165546-365c6801-440c-4429-a26d-312b3d9c0b63.png)
+                - Screenshot #5 Description: Redirection. 
+              
 
 
     - [x] (11/26/21) User will be able to list their accounts
