@@ -205,6 +205,7 @@
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_account.php
             - Pull Requests
             - PR link #1: https://github.com/NamanRaval/IT202-009/pull/57
+            - PR link #2: https://github.com/NamanRaval/IT202-009/pull/65 
             - Screenshots
               - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143967086-12ed26cf-cb76-4caa-a711-a4e13dabad65.png)
                 - Screenshot #1 Description: User can create a checking account with minimum $5.00. 
