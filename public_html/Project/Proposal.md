@@ -177,7 +177,7 @@
     - [x] (11/26/21) Create the Transactions table (see reference below)
         -  List of Evidence of Feature Completion
             - Status: Completed
-            - Direct Link: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=deposit 
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/test_list_transactions.php 
             - Pull Requests
             - PR link #1: https://github.com/NamanRaval/IT202-009/pull/55
             - Screenshots

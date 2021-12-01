@@ -56,7 +56,7 @@ if (isset($_POST["save"])) {
   if ($r) {
     changeBalance($db, 1, $db->lastInsertId(), 'deposit', $balance, 'New account deposit');
     flash("Account created successfully with Number: " . $account_number);
-    die(header("Location: accounts.php"));
+    redirect("accounts.php");
   } else {
     flash("Error creating account");
   }
