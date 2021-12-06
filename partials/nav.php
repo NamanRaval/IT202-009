@@ -51,6 +51,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=deposit'); ?>">Deposit</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=withdraw'); ?>">Withdraw</a>
+                            <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=transfer'); ?>">Transfer</a>
                     
                 <?php endif; ?>
                 <?php if (has_role("Admin")) : ?>
