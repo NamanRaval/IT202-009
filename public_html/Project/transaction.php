@@ -19,14 +19,22 @@ $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (isset($_POST["save"])) {
-    $account = $_POST["account"];
     $balance = $_POST["balance"];
     $memo = $_POST["memo"];
   
     if($type == 'deposit') {
+      $account = $_POST["account"];
       $r = changeBalance($db, 1, $account, 'deposit', $balance, $memo);
     }
     if($type == 'withdraw')  {
+      $account = $_POST["account"];
+      $stmt = $db->prepare('SELECT balance FROM Accounts WHERE id = :id');
+      $stmt->execute([':id' => $account]);
+      $acct = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($acct["balance"] < $balance) {
+        flash("Not enough funds to withdraw!");
+        redirect("Location: transaction.php?type=withdraw");
+      }
       $r = changeBalance($db, $account, 1, 'withdraw', $balance, $memo);
     }
   
