@@ -205,6 +205,7 @@
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_account.php
             - Pull Requests
             - PR link #1: https://github.com/NamanRaval/IT202-009/pull/57
+            - PR link #2: https://github.com/NamanRaval/IT202-009/pull/65 
             - Screenshots
               - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/143967086-12ed26cf-cb76-4caa-a711-a4e13dabad65.png)
                 - Screenshot #1 Description: User can create a checking account with minimum $5.00. 
@@ -214,6 +215,9 @@
                 - Screenshot #3 Description: Friendly user messages. 
               - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/143968028-ada52804-35df-4e6e-aaaf-16e903cf7d42.png)
                 - Screenshot #4 Description: Updated Accounts table. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/144165546-365c6801-440c-4429-a26d-312b3d9c0b63.png)
+                - Screenshot #5 Description: Redirection. 
+              
 
 
     - [x] (11/26/21) User will be able to list their accounts
@@ -259,7 +263,111 @@
               - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/143979277-d38a537e-35ee-40c9-9ebd-c2703feb4b71.png)
                 - Screenshot #6 Description: Error messages. 
 - Milestone 3
+    - [] (mm/dd/yyyy of completion) User will be able to transfer between their accounts
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+
+    - [] (mm/dd/yyyy of completion) Transaction History page
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+
+    - [] (mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+    - [] (mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
 - Milestone 4
+    - [] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+
+    - [] (mm/dd/yyyy of completion) User will be able open a savings account
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+
+    - [] (mm/dd/yyyy of completion) User will be able to take out a loan
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+    - [] (mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+    - [] (mm/dd/yyyy of completion) User will be able to close an account
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description: 
+
+    - [] (mm/dd/yyyy of completion) Admin role (leave this section for last)
+        -  List of Evidence of Feature Completion
+            - Status: Pending (Completed, Partially working, Incomplete, Pending)
+            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Pull Requests
+            - PR link #1: (repeat as necessary)
+            - Screenshots
+              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
+                - Screenshot #1 Description:
+ 
+    
 ### Intructions
 #### Don't delete this
 1. Pick one project type
