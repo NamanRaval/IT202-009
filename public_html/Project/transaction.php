@@ -69,6 +69,7 @@ if (isset($_POST["save"])) {
 <ul class="nav nav-pills justify-content-center mt-4 mb-2">
   <li class="nav-item"><a class="nav-link <?php echo $type == 'deposit' ? 'active' : ''; ?>" href="?type=deposit">Deposit</a></li>
   <li class="nav-item"><a class="nav-link <?php echo $type == 'withdraw' ? 'active' : ''; ?>" href="?type=withdraw">Withdraw</a></li>
+  <li class="nav-item"><a class="nav-link <?php echo $type == 'transfer' ? 'active' : ''; ?>" href="?type=transfer">Transfer</a></li>
 </ul> 
 
 <form method="POST">
