@@ -1,5 +1,5 @@
 <?php
 
-die(header("Location: login.php"));
+redirect("login.php");
 
 

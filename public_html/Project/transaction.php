@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../../partials/nav.php";
 if (!is_logged_in()) {
   flash("You don't have permission to access this page");
-  die(header("Location: login.php"));
+  redirect("login.php");
 }
 
 if (isset($_GET["type"])) {
@@ -33,7 +33,7 @@ if (isset($_POST["save"])) {
       $acct = $stmt->fetch(PDO::FETCH_ASSOC);
       if($acct["balance"] < $balance) {
         flash("Insufficient funds!");
-        redirect("Location: transaction.php?type=withdraw");
+        redirect("transaction.php?type=withdraw");
       }
       $r = changeBalance($db, $account, 1, 'withdraw', $balance, $memo);
     }
@@ -43,20 +43,20 @@ if (isset($_POST["save"])) {
       $account_dest = $_POST["account_dest"];
       if($account_src == $account_dest){
         flash("Cannot transfer to same account!");
-        redirect("Location: transaction.php?type=transfer");
+        redirect("transaction.php?type=transfer");
       }
       $stmt = $db->prepare('SELECT balance FROM Accounts WHERE id = :id');
       $stmt->execute([':id' => $account_src]);
       $acct = $stmt->fetch(PDO::FETCH_ASSOC);
       if($acct["balance"] < $balance) {
         flash("Insufficient funds!");
-        redirect("Location: transaction.php?type=transfer");
+        redirect("transaction.php?type=transfer");
       }
       $r = changeBalance($db, $account_src, $account_dest, 'transfer', $balance, $memo);
     }
 
     if ($r) {
-      flash("Successfully executed transaction.");
+      flash("Successfully executed transaction!");
     } else {
       flash("Error doing transaction!");
     }
