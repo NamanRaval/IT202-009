@@ -75,8 +75,21 @@ if (isset($_POST["save"])) {
 <form method="POST">
   <?php if (count($results) > 0): ?>
   <div class="form-group">
-    <label for="account">Account</label>
-    <select class="form-control" id="account" name="account">
+    <label for="account"><?php echo $type == 'transfer' ? 'Account Source' : 'Account'; ?></label>
+    <select class="form-control" id="account" name="<?php echo $type == 'transfer' ? 'account_src' : 'account'; ?>">
+      <?php foreach ($results as $r): ?>
+      <option value="<?php echo($r["id"]); ?>">
+        <?php echo($r["account_number"]); ?> | <?php echo($r["account_type"]); ?> | <?php echo($r["balance"]); ?>
+      </option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+  <?php endif; ?>
+  <?php if (count($results) > 0 && $type == 'transfer'): ?>
+  <div class="form-group">
+    <label for="account">Account Destination</label>
+    <select class="form-control" id="account" name="account_dest">
+    
       <?php foreach ($results as $r): ?>
       <option value="<?php echo($r["id"]); ?>">
         <?php echo($r["account_number"]); ?> | <?php echo($r["account_type"]); ?> | <?php echo($r["balance"]); ?>

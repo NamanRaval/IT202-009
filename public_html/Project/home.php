@@ -20,7 +20,7 @@ if (is_logged_in(true)) {
         <a class="btn btn-primary" href="<?php echo get_url('accounts.php');?>" role="button"></i> My Accounts</a>
         <a class="btn btn-primary" href="<?php echo get_url('transaction.php?type=deposit');?>" role="button"></i> Deposit</a>
         <a class="btn btn-primary" href="<?php echo get_url('transaction.php?type=withdraw');?>" role="button"></i> Withdraw</a>
-        <a class="btn btn-primary" href="#" role="button"></i> Transfer</a>
+        <a class="btn btn-primary" href="<?php echo get_url('transaction.php?type=transfer');?>" role="button"></i> Transfer</a>
         <a class="btn btn-primary" href="<?php echo get_url('profile.php');?>" role="button"></i> Profile</a>
       </p>
     </div>
