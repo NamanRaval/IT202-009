@@ -32,12 +32,29 @@ if (isset($_POST["save"])) {
       $stmt->execute([':id' => $account]);
       $acct = $stmt->fetch(PDO::FETCH_ASSOC);
       if($acct["balance"] < $balance) {
-        flash("Not enough funds to withdraw!");
+        flash("Insufficient funds!");
         redirect("Location: transaction.php?type=withdraw");
       }
       $r = changeBalance($db, $account, 1, 'withdraw', $balance, $memo);
     }
-  
+
+    if($type == 'transfer')  {
+      $account_src = $_POST["account_src"];
+      $account_dest = $_POST["account_dest"];
+      if($account_src == $account_dest){
+        flash("Cannot transfer to same account!");
+        redirect("Location: transaction.php?type=transfer");
+      }
+      $stmt = $db->prepare('SELECT balance FROM Accounts WHERE id = :id');
+      $stmt->execute([':id' => $account_src]);
+      $acct = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($acct["balance"] < $balance) {
+        flash("Insufficient funds!");
+        redirect("Location: transaction.php?type=transfer");
+      }
+      $r = changeBalance($db, $account_src, $account_dest, 'transfer', $balance, $memo);
+    }
+
     if ($r) {
       flash("Successfully executed transaction.");
     } else {
