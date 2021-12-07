@@ -262,6 +262,7 @@
                 - Screenshot #5 Description: Friendly success messages.
               - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/143979277-d38a537e-35ee-40c9-9ebd-c2703feb4b71.png)
                 - Screenshot #6 Description: Error messages. 
+                
 - Milestone 3
     - [] (mm/dd/yyyy of completion) User will be able to transfer between their accounts
         -  List of Evidence of Feature Completion
@@ -272,7 +273,7 @@
             - Screenshots
               - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
                 - Screenshot #1 Description: 
-
+                
 
     - [] (mm/dd/yyyy of completion) Transaction History page
         -  List of Evidence of Feature Completion
@@ -283,8 +284,7 @@
             - Screenshots
               - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
                 - Screenshot #1 Description: 
-
-
+                
     - [] (mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
         -  List of Evidence of Feature Completion
             - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -304,6 +304,7 @@
             - Screenshots
               - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
                 - Screenshot #1 Description: 
+
 - Milestone 4
  
     
