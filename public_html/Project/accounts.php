@@ -5,25 +5,19 @@ if (!is_logged_in()) {
   redirect("login.php");
 }
 
-$results = [];
-if (isset($_SESSION['user']['username'])) {
-  $username = $_SESSION['user']['username'];
+$db = getDB();
+$user = get_user_id();
+$stmt = $db->prepare(
+  "SELECT Accounts.id, account_number, account_type, balance, last_updated FROM Accounts JOIN Users ON Accounts.user_id = Users.id WHERE Users.id = :q ORDER BY Accounts.id"
+);
+$r = $stmt->execute([":q" => $user]);
+if ($r) {
+  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+  $results = [];
+  flash("There was a problem fetching the results");
 }
-if (!empty($username)) {
-  $db = getDB();
-  $stmt = $db->prepare(
-    "SELECT Accounts.id, account_number, account_type, balance FROM Accounts JOIN Users ON Accounts.user_id = Users.id WHERE Users.username = :q ORDER BY Accounts.id LIMIT 5"
-  );
-  $r = $stmt->execute([":q" => $username]);
-  $t_stmt = $db->prepare(
-    "SELECT amount, action_type, memo, expected_total, created, Accounts.account_number FROM Transactions JOIN Accounts ON Transactions.act_dest_id = Accounts.id WHERE Transactions.act_src_id = :q ORDER BY Transactions.id DESC LIMIT 10"
-  );
-  if ($r) {
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-  } else {
-    flash("There was a problem fetching the results");
-  }
-}
+
 ?>
 <div class="mt-4">
     <?php if (count($results) > 0): ?>
