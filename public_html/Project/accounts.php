@@ -19,50 +19,30 @@ if ($r) {
 }
 
 ?>
-<div class="mt-4">
+<h3 class="text-center mt-4 mb-4">Accounts</h3>
     <?php if (count($results) > 0): ?>
+      <table class="table">
+        <thead>
+          <tr>  
+            <th scope="col">Account Number</th>
+            <th scope="col">Account Type</th>
+            <th scope="col">Balance</th>
+            <th scope="col">History</th>
+          </tr>
+        </thead>
+        <tbody>
       <?php foreach ($results as $r): ?>
-      <div class="card mb-4">
-        <div class="card-header">Account: <b><?php echo($r["account_number"]); ?></b></div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Type: <?php echo(ucfirst($r["account_type"])); ?></li>
-          <li class="list-group-item">Balance: $<?php echo($r["balance"]); ?></li>
-        </ul>
-            <?php
-                $t = $t_stmt->execute([ ":q" => $r['id'] ]);
-                if ($t) {
-                    $transactions = $t_stmt->fetchAll(PDO::FETCH_ASSOC);
-                } else {
-                    flash("There was a problem fetching the results");
-                }
-                ?>
-                <?php if (count($transactions) > 0): ?>
-                <table class="table table-bordered table-striped table-sm">
-                    <tr>
-                        <th>Date</th>
-                        <th>Type</th>
-                        <th>Amount</th>
-                        <th>Expected Total</th>
-                        <th>Memo</th>
-                        <th>From/To</th>
-                    </tr>
-                <?php foreach ($transactions as $t): ?>
-                    <tr>
-                        <td><?php echo($t["created"]); ?></td>
-                        <td><?php echo($t["action_type"]); ?></td>
-                        <td>$<?php echo($t["amount"]); ?></td>
-                        <td>$<?php echo($t["expected_total"]); ?></td>
-                        <td><?php echo($t["memo"]); ?></td>
-                        <td><?php echo($t["account_number"]); ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </table>
-                <?php endif; ?>
-      </div>
+        <tr>
+            <th scope="row"><?php echo($r["account_number"]); ?></th>
+            <td><?php echo(ucfirst($r["account_type"])); ?></td>
+            <td>$<?php echo($r["balance"]); ?><br><small>As of <?php echo($r["last_updated"]); ?></small></td>
+            <td><a href="view_transactions.php?id=<?php echo($r["id"]); ?>" class="btn btn-success">Transactions</a></td>
+          </tr>
       <?php endforeach; ?>
+        </tbody>
+      </table>
     <?php else: ?>
       <p>You don't have any accounts.</p>
     <?php endif; ?>
-    </div>
 
 <?php require __DIR__ . "/../../partials/flash.php"; ?>
