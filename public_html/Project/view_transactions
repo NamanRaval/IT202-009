@@ -24,3 +24,14 @@ if (isset($_GET["id"])) {
     WHERE Transactions.act_src_id = :acct_id AND Src.user_id = :user
     ORDER BY Transactions.id DESC LIMIT 10"
   );
+  $r = $stmt->execute([
+    ":acct_id" => $id,
+    ":user" => $user
+  ]);
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  if($result){
+    $total = (int)$result["total"];
+  } else {
+    $total = 0;
+  }
+  
