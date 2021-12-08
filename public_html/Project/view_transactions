@@ -34,7 +34,29 @@ if (isset($_GET["id"])) {
   } else {
     $total = 0;
   }
-  
+
   $per_page = 10;
   $total_pages = ceil($total / $per_page);
   $offset = ($page - 1) * $per_page;
+
+  $stmt = $db->prepare(
+    "SELECT amount, action_type, memo, expected_total, created, Dest.account_number AS dest, Src.account_number AS src
+    FROM Transactions
+    JOIN Accounts AS Src ON Transactions.act_src_id = Src.id
+    JOIN Accounts AS Dest ON Transactions.act_dest_id = Dest.id
+    WHERE Transactions.act_src_id = :acct_id AND Src.user_id = :user
+    ORDER BY Transactions.id DESC LIMIT :offset,:count"
+  );
+  $stmt->bindValue(":acct_id", $id);
+  $stmt->bindValue(":user", $user);
+  $stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
+  $stmt->bindValue(":count", $per_page, PDO::PARAM_INT);
+  $r = $stmt->execute();
+  if ($r) {
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  } else {
+    $results = [];
+    flash("There was a problem fetching the results");
+  }
+}
+?>
