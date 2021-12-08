@@ -75,4 +75,18 @@ if (isset($_GET["id"])) {
       </tr>
     </thead>
     <tbody>
-        
+  <?php foreach ($results as $r): ?>
+      <tr>
+        <td><?php echo($r["src"]); ?></td>
+        <th scope="row"><?php echo($r["dest"]); ?></th>
+        <td><?php echo(ucfirst($r["action_type"])); ?></td>
+        <td>$<?php echo($r["amount"]); ?></td>
+        <td><?php echo($r["memo"]); ?></td>
+        <td>$<?php echo($r["expected_total"]); ?></td>
+      </tr>
+  <?php endforeach; ?>
+    </tbody>
+  </table>
+<?php else: ?>
+  <p>You don't have any accounts.</p>
+<?php endif; ?>
