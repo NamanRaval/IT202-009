@@ -15,4 +15,12 @@ if (isset($_GET["id"])) {
   } else {
     $page = 1;
   }
-  
+  $db = getDB();
+
+  $stmt = $db->prepare(
+    "SELECT count(*) as total
+    FROM Transactions
+    JOIN Accounts AS Src ON Transactions.act_src_id = Src.id
+    WHERE Transactions.act_src_id = :acct_id AND Src.user_id = :user
+    ORDER BY Transactions.id DESC LIMIT 10"
+  );
