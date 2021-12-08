@@ -19,11 +19,27 @@ nav li{
 .alert-info {
     background-color: rgb(226, 230, 42);
 }
-nav li{display: inline; background-color: rgb(51, 153, 139);}
+nav li{display: inline; background-color: rgb(102, 133, 153);}
 nav li a{color: hotpink}
 input{border-radius: 20%;}
 body{
-    background-color: rgb(99, 214, 199);
-    color: rgb(153, 0, 153);
+    background-color: rgb(218, 247, 166);
+    color: rgb(0, 0, 0);
+
+}
+tbody{
+    background-color: rgb(218, 247, 166);
+    color: rgb(0, 0, 0);
+
+}
+
+th{
+    background-color: rgb(218, 247, 166);
+    color: rgb(0, 0, 0);
+
+}
+thead{
+    background-color: rgb(218, 247, 166);
+    color: rgb(0, 0, 0);
 
 }
