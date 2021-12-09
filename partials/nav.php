@@ -30,7 +30,7 @@ require_once(__DIR__ . "/../lib/functions.php");
 <script src="helpers.js"></script>
 <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
-    <a class="navbar-brand" href="<?php echo get_url('.'); ?>">Naman's Bank</a>
+    <a class="navbar-brand" href="<?php echo get_url('home.php'); ?>">Naman's Bank</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,6 +52,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=deposit'); ?>">Deposit</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=withdraw'); ?>">Withdraw</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=transfer'); ?>">Transfer</a>
+                            <a class="dropdown-item" href="<?php echo get_url('transaction_out.php'); ?>">Transfer Out</a>
                     
                 <?php endif; ?>
                 <?php if (has_role("Admin")) : ?>
