@@ -65,29 +65,29 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
 <form method="POST">
   <div class="form-group">
     <label for="email">Email Address</label>
-    <input type="email" class="form-control" id="email" name="email" maxlength="100" required value="<?php echo($email); ?>">
+    <input type="email" class="form-control" id="email" name="email" maxlength="100" required value="<?php se($email); ?>">
   </div>
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" maxlength="60" required value="<?php echo($username); ?>">
+    <input type="text" class="form-control" id="username" name="username" maxlength="60" required value="<?php se($username); ?>">
   </div>
   <div class="row">
     <div class="col-sm">
       <div class="form-group">
         <label for="first_name">First Name</label>
-        <input type="text" class="form-control" id="first_name" name="first_name" maxlength="60" required placeholder="">
+        <input type="text" class="form-control" id="first_name" name="first_name" maxlength="60" required value="<?php se($first_name); ?>">
       </div>
     </div>
     <div class="col-sm">
       <div class="form-group">
         <label for="last_name">Last Name</label>
-        <input type="text" class="form-control" id="last_name" name="last_name" maxlength="60" required placeholder="">
+        <input type="text" class="form-control" id="last_name" name="last_name" maxlength="60" required value="<?php se($last_name); ?>">
       </div>
     </div>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" maxlength="60" name="password" required>
+    <input type="password" class="form-control" id="password" maxlength="60" name="password" required value="<?php se($password); ?>">
   </div>
   <div class="form-group">
     <label for="confirm">Confirm Password</label>
