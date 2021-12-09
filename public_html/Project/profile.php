@@ -133,7 +133,7 @@ if (isset($_POST["saved"])) {
 
   <!-- DO NOT PRELOAD PASSWORD-->
   <div class="form-group">
-    <label for="password">Password</label>
+    <label for="password"> New Password</label>
     <input type="password" class="form-control" id="password" name="password" maxlength="60">
   </div>
   <div class="form-group">
