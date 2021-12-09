@@ -6,14 +6,11 @@ reset_session();
 $email = se($_POST, "email", "", false);
 $password = se($_POST, "password", "", false);
 $username = se($_POST, "username", "", false);
+$first_name = se($_POST, "first_name", "", false);
+$last_name = se($_POST, "last_name", "", false);
 //TODO 2: add PHP Code
-if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
-    $confirm = se(
-        $_POST,
-        "confirm",
-        "",
-        false
-    );
+if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"]) && isset($_POST["first_name"]) && isset($_POST["last_name"])) {
+    $confirm = se($_POST, "confirm", "", false);
     //TODO 3
     $hasError = false;
     if (empty($email)) {
@@ -53,9 +50,9 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         //TODO 4
         $hash = password_hash($password, PASSWORD_BCRYPT);
         $db = getDB();
-        $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
+        $stmt = $db->prepare("INSERT INTO Users(email, username, password, first_name, last_name) VALUES(:email,:username, :password, :first_name, :last_name)");
         try {
-            $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username]);
+            $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username, ":first_name" => $first_name, ":last_name" => $last_name]);
             flash("Successfully registered!");
         } catch (Exception $e) {
             users_check_duplicate($e->errorInfo);
@@ -63,28 +60,41 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     }
 }
 ?>
-<div class="container-fluid">
-    <h1>Register</h1>
-    <form onsubmit="return validate(this)" method="POST">
-        <div class="mb-3">
-            <label class="form-label" for="email">Email</label>
-            <input class="form-control" type="email" id="email" name="email" value="<?php se($email);?>" required />
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="username">Username</label>
-            <input class="form-control" type="text" name="username" value="<?php se($username);?>" required maxlength="30" />
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="pw">Password</label>
-            <input class="form-control" type="password" id="pw" name="password" value="<?php se($password);?>" required minlength="8" />
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="confirm">Confirm</label>
-            <input class="form-control" type="password" name="confirm" required minlength="8" />
-        </div>
-        <input type="submit" class="mt-3 btn btn-primary" value="Register" />
-    </form>
-</div>
+<h3 class="text-center mt-4">Register</h3>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" maxlength="100" required value="<?php echo($email); ?>">
+  </div>
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" name="username" maxlength="60" required value="<?php echo($username); ?>">
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" class="form-control" id="first_name" name="first_name" maxlength="60" required placeholder="">
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name" maxlength="60" required placeholder="">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" maxlength="60" name="password" required>
+  </div>
+  <div class="form-group">
+    <label for="confirm">Confirm Password</label>
+    <input type="password" class="form-control" id="confirm" maxlength="60" name="confirm" required>
+  </div>
+  <button type="submit" name="register" value="Register" class="btn btn-primary">Register</button>
+</form>
 <script>
     function validate(form) {
         //TODO 1: implement JavaScript validation
