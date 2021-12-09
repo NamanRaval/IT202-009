@@ -77,6 +77,29 @@ function get_user_id()
     }
     return false;
 }
+function get_first_name()
+{
+  if (is_logged_in()) {
+    return se($_SESSION["user"], "first_name", "", false);
+  }
+  return "";
+}
+
+function get_last_name()
+{
+  if (is_logged_in()) {
+    return se($_SESSION["user"], "last_name", "", false);
+  }
+  return "";
+}
+
+function get_name()
+{
+  if (is_logged_in()) {
+    return $_SESSION["user"]["first_name"] . " " .$_SESSION["user"]["last_name"];
+  }
+  return -1;
+}
 //TODO 4: Flash Message Helpers
 function flash($msg = "", $color = "info")
 {
@@ -198,3 +221,4 @@ function redirect($path)
     echo "<noscript><meta http-equiv=\"refresh\" content=\"0;url=" . get_url($path) . "\"/></noscript>";
     die();
 }
+
