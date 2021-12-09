@@ -18,3 +18,15 @@ $stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id ORDER BY id ASC
 $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+if (isset($_POST["save"])) {
+    $account_src = $_POST["account_src"];
+    $balance = $_POST["balance"];
+    $memo = $_POST["memo"];
+  
+    $last_name = $_POST["last_name"];
+    $last_four = $_POST["last_four"];
+  
+    if(strlen($last_four) != 4){
+      flash("Please enter last 4 digits of the destination account.");
+      redirect("transaction_out.php");
+    }
