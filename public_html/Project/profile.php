@@ -132,15 +132,20 @@ if (isset($_POST["saved"])) {
   <h4 class="text-left">Change Password</h4>
 
   <!-- DO NOT PRELOAD PASSWORD-->
-  <div class="form-group">
-    <label for="password"> New Password</label>
-    <input type="password" class="form-control" id="password" name="password" maxlength="60">
-  </div>
-  <div class="form-group">
-    <label for="confirm">Confirm Password</label>
-    <input type="password" class="form-control" id="confirm" name="confirm" maxlength="60">
-  </div>
-  <button type="submit" name="saved" value="Update Profile" class="btn btn-primary">Update Profile</button>
-</form>
+        <div class="mb-3">
+            <label class="form-label" for="cp">Current Password</label>
+            <input class="form-control" type="password" name="currentPassword" id="cp" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="np">New Password</label>
+            <input class="form-control" type="password" name="newPassword" id="np" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="conp">Confirm Password</label>
+            <input class="form-control" type="password" name="confirmPassword" id="conp" />
+        </div>
+        <input type="submit" class="mt-3 btn btn-primary" value="Update Profile" name="save" />
+    </form>
+</div>
 
 <?php require __DIR__ . "/../../partials/flash.php"; ?>
