@@ -30,3 +30,32 @@ if (isset($_POST["save"])) {
       flash("Please enter last 4 digits of the destination account.");
       redirect("transaction_out.php");
     }
+    
+    $stmt = $db->prepare('SELECT Accounts.id, Users.username FROM Accounts JOIN Users ON Accounts.user_id = Users.id WHERE Users.last_name = :last_name AND Accounts.account_number LIKE :last_four');
+    $stmt->execute([
+      ':last_name' => $last_name,
+      ':last_four' => "%$last_four"
+    ]);
+    $account_dest = $stmt->fetch(PDO::FETCH_ASSOC);
+  
+    if($account_src == $account_dest["id"] || $account_dest["username"] == get_username()) {
+      flash("Cannot transfer to the same user!");
+      die(header("Location: transaction_out.php"));
+    }
+    $stmt = $db->prepare('SELECT balance FROM Accounts WHERE id = :id');
+    $stmt->execute([':id' => $account_src]);
+    $acct = $stmt->fetch(PDO::FETCH_ASSOC);
+    if($acct["balance"] < $balance) {
+      flash("Not enough funds to transfer!");
+      die(header("Location: transaction.php?type=transfer"));
+    }
+    $r = changeBalance($db, $account_src, $account_dest["id"], 'ext-transfer', $balance, $memo);
+  
+    if ($r) {
+      flash("Successfully executed transaction.");
+    } else {
+      flash("Error doing transaction!");
+    }
+  }
+  
+  ?>
