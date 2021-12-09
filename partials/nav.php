@@ -52,6 +52,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=deposit'); ?>">Deposit</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=withdraw'); ?>">Withdraw</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=transfer'); ?>">Transfer</a>
+                            <a class="dropdown-item" href="<?php echo get_url('transaction_out.php'); ?>">Transfer Out</a>
                     
                 <?php endif; ?>
                 <?php if (has_role("Admin")) : ?>
