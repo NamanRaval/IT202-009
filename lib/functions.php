@@ -96,9 +96,9 @@ function get_last_name()
 function get_name()
 {
   if (is_logged_in()) {
-    return $_SESSION["user"]["first_name"] . " " .$_SESSION["user"]["last_name"];
+    return se($_SESSION["user"]["first_name"]) . " " . se($_SESSION["user"]["last_name"]);
   }
-  return -1;
+  return "";
 }
 //TODO 4: Flash Message Helpers
 function flash($msg = "", $color = "info")

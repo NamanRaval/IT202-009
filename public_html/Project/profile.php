@@ -102,7 +102,7 @@ if (isset($_POST["saved"])) {
 }
 ?>
 
-<h3 class="text-center mt-4">Profile</h3>
+<h3 class="text-left mt-4">Profile</h3>
 
 <form method="POST">
   <div class="form-group">
@@ -129,7 +129,7 @@ if (isset($_POST["saved"])) {
   </div>
 
   <hr>
-  <h4 class="text-center">Change Password</h4>
+  <h4 class="text-left">Change Password</h4>
 
   <!-- DO NOT PRELOAD PASSWORD-->
   <div class="form-group">
