@@ -87,11 +87,9 @@ if (isset($_GET["id"])) {
   <?php endforeach; ?>
     </tbody>
   </table>
-<?php else: ?>
-  <p>You don't have any accounts.</p>
-<?php endif; ?>
 
-<nav>
+
+  <nav>
     <ul class="pagination justify-content-center">
         <li class="page-item <?php echo ($page - 1) < 1 ? "disabled" : ""; ?>">
             <a class="page-link" href="?id=<?php echo($id); ?>&page=<?php echo $page - 1; ?>" tabindex="-1">Previous</a>
@@ -103,6 +101,9 @@ if (isset($_GET["id"])) {
             <a class="page-link" href="?id=<?php echo($id); ?>&page=<?php echo $page + 1; ?>">Next</a>
         </li>
     </ul>
-</nav>
+  </nav>
+<?php else: ?>
+  <p>You don't have any accounts.</p>
+<?php endif; ?>
 
 <?php require __DIR__ . "/../../partials/flash.php"; ?>
