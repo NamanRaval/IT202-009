@@ -151,7 +151,7 @@
 
     
 - Milestone 2
-    - [x] (11/24/21) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+    - [x] (11/24/2021) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php 
@@ -162,7 +162,7 @@
                 - Screenshot #1 Description: Accounts Table created. 
                 
 
-    - [x] (11/26/21) Project setup steps:
+    - [x] (11/26/2021) Project setup steps:
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/test_create_transactions.php 
@@ -174,7 +174,7 @@
               - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143966288-6a4d5727-01b7-4eb4-86b2-02859c95861d.png)
                 - Screenshot #2 Description: System user created. 
                 
-    - [x] (11/26/21) Create the Transactions table (see reference below)
+    - [x] (11/26/2021) Create the Transactions table (see reference below)
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/test_list_transactions.php 
@@ -187,7 +187,7 @@
                 - Screenshot #2 Description: Src/Dest, BalanceChange, TransactionType, Memo, ExpectedTotal, Created implemented. 
 
 
-    - [x] (11/26/21) Dashboard page
+    - [x] (11/26/2021) Dashboard page
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/home.php 
@@ -199,7 +199,7 @@
               - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143966675-115a3f76-5d1a-4fb8-9355-7a45b09bf80d.png)
                 - Screenshot #2 Description: Dashboard display code. 
 
-    - [x] (11/26/21) User will be able to create a checking account
+    - [x] (11/26/2021) User will be able to create a checking account
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_account.php
@@ -220,7 +220,7 @@
               
 
 
-    - [x] (11/26/21) User will be able to list their accounts
+    - [x] (11/26/2021) User will be able to list their accounts
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php
@@ -232,7 +232,7 @@
               - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/143977266-2886eff8-4a56-4253-8f33-eb825e109b16.png)
                 - Screenshot #2 Description: Limit of 5 accounts on page. 
 
-    - [x] (11/28/21) User will be able to click an account for more information (a.ka. Transaction History page)
+    - [x] (11/28/2021) User will be able to click an account for more information (a.ka. Transaction History page)
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php
@@ -242,7 +242,7 @@
               - Screenshot #1:![image](https://user-images.githubusercontent.com/90223403/143977666-114e61ce-eafb-4531-bea8-3f94b91fe859.png)
                 - Screenshot #1 Description: Latest transaction history (10 results). 
 
-    - [x] (11/29/21) User will be able to deposit/withdraw from their account(s)
+    - [x] (11/29/2021) User will be able to deposit/withdraw from their account(s)
         -  List of Evidence of Feature Completion
             - Status: Completed
             - Direct Link #1: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=withdraw
@@ -262,48 +262,69 @@
                 - Screenshot #5 Description: Friendly success messages.
               - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/143979277-d38a537e-35ee-40c9-9ebd-c2703feb4b71.png)
                 - Screenshot #6 Description: Error messages. 
+                
 - Milestone 3
-    - [] (mm/dd/yyyy of completion) User will be able to transfer between their accounts
+    - [x] (12/06/2021) User will be able to transfer between their accounts
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/transaction.php?type=transfer 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/76
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/145484032-72313856-ea53-42ba-a99c-c48ee8451835.png)
+                - Screenshot #1 Description: User can transfer between accounts with a memo and a positive numeric value. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/145484168-5d401847-ea05-453d-bbec-f3d99140346d.png)
+                - Screenshot #2 Description: Friendly error messages and a dropdown for accounts. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/145484260-c2188338-b1dc-4cbc-af56-21efbce2b3be.png)
+                - Screenshot #3 Description: User cannot transfer more than what they have. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/145484322-91876022-a90b-4a38-9496-606dfaf5393c.png)
+                - Screenshot #4 Description: Success messages. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/145484399-76539312-114f-4ca7-95b7-350509d7a857.png)
+                - Screenshot #5 Description: Transfers included in transaction table. 
+              - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/145484514-76ad9f72-fb3e-452e-97cb-eae9e406f75f.png)
+                - Screenshot #6 Description: Included in Transaction History page. 
+                
 
-
-    - [] (mm/dd/yyyy of completion) Transaction History page
+    - [x] (12/08/2021) Transaction History page
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/view_transactions.php?id=1 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/77
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
-
-
-    - [] (mm/dd/yyyy of completion) User’s profile page should record/show First and Last name
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/145485048-4a4c3377-f51a-4b46-bf98-c47be2f326b1.png)
+                - Screenshot #1 Description: Transaction History buttons on accounts page. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/145485099-973c57ac-21c8-41b0-8b1b-e7195a1cfb79.png)
+                - Screenshot #2 Description: Ten transactions per page with pagination on the bottom clicker. All transaction information included on page. 
+                
+    - [x] (12/08/2021) User’s profile page should record/show First and Last name
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/profile.php 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/78
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/145485765-87324354-f537-4ff1-99f7-b5d4ab3eaca7.png)
+                - Screenshot #1 Description: First and Last name included on profile page. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/145485854-95459f07-d5be-446f-a206-e588feb7d153.png)
+                - Screenshot #2 Description: User can register with first and last name too. 
 
-    - [] (mm/dd/yyyy of completion) User will be able to transfer funds to another user’s account
+    - [x] (12/09/2021) User will be able to transfer funds to another user’s account
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/transaction_out.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/79
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/145486143-b636af4a-aeb3-4b3f-a154-8040ad4d8a31.png)
+                - Screenshot #1 Description: User can transfer to another user's account and include a memo. The form includes last name and last four digits of destination account as well as inputting a positive numeric value.
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/145486360-5fdd9ffc-e1a2-49b7-ba73-11fb2981e765.png)
+                - Screenshot #2 Description: Dropdown of accounts included. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/145486430-a6e47d7c-60d7-4d57-83d9-dbf853cd661c.png)
+                - Screenshot #3 Description: Friendly error messages. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/145486526-f903d9ae-f92c-4627-9ef3-0b987775bf08.png)
+                - Screenshot #4 Description: All error and success messages as well as "ext-transfer" included. 
+
 - Milestone 4
     - [] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
         -  List of Evidence of Feature Completion

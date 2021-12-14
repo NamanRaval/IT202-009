@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../../partials/nav.php";
 if (!is_logged_in()) {
   flash("You don't have permission to access this page");
-  die(header("Location: login.php"));
+  redirect("login.php");
 }
 ?>
 <h3 class="text-center mt-4">Create New Bank Account</h3>
