@@ -14,7 +14,7 @@ if (isset($_GET["type"])) {
 $user = get_user_id();
 $db = getDB();
 
-$stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id ORDER BY id ASC');
+$stmt = $db->prepare("SELECT * FROM Accounts WHERE user_id = :id AND Accounts.account_type NOT LIKE 'loan' AND active = 1 ORDER BY id ASC");
 $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -31,7 +31,7 @@ if (isset($_POST["save"])) {
       redirect("transaction_out.php");
     }
 
-    $stmt = $db->prepare('SELECT Accounts.id, Users.username FROM Accounts JOIN Users ON Accounts.user_id = Users.id WHERE Users.last_name = :last_name AND Accounts.account_number LIKE :last_four');
+    $stmt = $db->prepare('SELECT Accounts.id, Users.username FROM Accounts JOIN Users ON Accounts.user_id = Users.id WHERE Users.last_name = :last_name AND Accounts.account_number LIKE :last_four AND active = 1');
     $stmt->execute([
       ':last_name' => $last_name,
       ':last_four' => "%$last_four"
@@ -40,6 +40,10 @@ if (isset($_POST["save"])) {
   
     if($account_src == $account_dest["id"] || $account_dest["username"] == get_username()) {
       flash("Cannot transfer to the same user!");
+      redirect("transaction_out.php");
+    }
+    if($account_dest["account_type"] == "loan") {
+      flash("Cannot transfer to a loan account!");
       redirect("transaction_out.php");
     }
     $stmt = $db->prepare('SELECT balance FROM Accounts WHERE id = :id');

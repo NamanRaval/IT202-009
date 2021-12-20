@@ -53,15 +53,14 @@ if (isset($_POST["saved"])) {
     }
   }
   if ($isValid) {
-    $stmt = $db->prepare(
-      "UPDATE Users set email = :email, username = :username, first_name = :first_name, last_name = :last_name where id = :id"
-    );
+    $stmt = $db->prepare("UPDATE Users set email = :email, username = :username, first_name = :first_name, last_name = :last_name, privacy = :privacy where id = :id");
     $r = $stmt->execute([
       ":email" => $newEmail,
       ":username" => $newUsername,
       ":id" => get_user_id(),
       ":first_name" => $_POST["first_name"],
-      ":last_name" => $_POST["last_name"]
+      ":last_name" => $_POST["last_name"],
+      ":privacy" => $_POST["privacy"]
     ]);
     if ($r) {
       flash("Updated profile");
@@ -85,7 +84,7 @@ if (isset($_POST["saved"])) {
       }
     }
     $stmt = $db->prepare(
-      "SELECT email, username, first_name, last_name from Users WHERE id = :id LIMIT 1"
+      "SELECT email, username, first_name, last_name, privacy from Users WHERE id = :id LIMIT 1"
     );
     $stmt->execute([":id" => get_user_id()]);
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -96,6 +95,7 @@ if (isset($_POST["saved"])) {
       $_SESSION["user"]["username"] = $username;
       $_SESSION["user"]["first_name"] = $result["first_name"];
       $_SESSION["user"]["last_name"] = $result["last_name"];
+      $_SESSION["user"]["privacy"] = $result["privacy"];
     }
   } else {
   }
@@ -126,6 +126,14 @@ if (isset($_POST["saved"])) {
         <input type="text" class="form-control" id="last_name" name="last_name" maxlength="60" required value="<?php se(get_last_name()); ?>">
       </div>
     </div>
+  </div>
+  <div class="form-group">
+    <label for="privacy">Privacy</label>
+    <select class="form-control" id="privacy" name="privacy">
+      <option value="private" <?php echo get_privacy() == "private" ? "selected": ""; ?>>Private</option>
+      <option value="public" <?php echo get_privacy() == "public" ? "selected": ""; ?>>Public</option>
+	  </select>
+    <small class="form-text text-muted">Allow other users to see your profile.</small>
   </div>
 
   <hr>

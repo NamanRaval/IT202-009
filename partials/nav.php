@@ -44,6 +44,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('home.php'); ?>">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('accounts.php'); ?>">Accounts</a></li>
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="rolesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Transaction
@@ -53,6 +54,8 @@ require_once(__DIR__ . "/../lib/functions.php");
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=withdraw'); ?>">Withdraw</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction.php?type=transfer'); ?>">Transfer</a>
                             <a class="dropdown-item" href="<?php echo get_url('transaction_out.php'); ?>">Transfer Out</a>
+                            <a class="dropdown-item" href="<?php echo get_url('create_loan.php'); ?>">Take out a Loan</a>
+
                     
                 <?php endif; ?>
                 <?php if (has_role("Admin")) : ?>
@@ -72,7 +75,9 @@ require_once(__DIR__ . "/../lib/functions.php");
                     </li>
                 <?php endif; ?>
                 <?php if (is_logged_in()) : ?>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('close_account.php'); ?>">Close Account</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
+                    
                 <?php endif; ?>
             </ul>
         </div>

@@ -1,5 +1,3 @@
 <?php
-
-redirect("login.php");
-
-
+header("Location: ../index.php");
+?>
