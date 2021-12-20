@@ -75,7 +75,9 @@ require_once(__DIR__ . "/../lib/functions.php");
                     </li>
                 <?php endif; ?>
                 <?php if (is_logged_in()) : ?>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('close_account.php'); ?>">Close Account</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
+                    
                 <?php endif; ?>
             </ul>
         </div>
