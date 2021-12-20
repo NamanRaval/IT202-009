@@ -18,4 +18,32 @@ if (isset($_POST["save"])) {
       $account_number = rand(100000000000, 999999999999);
       $check->execute([':q' => $account_number]);
     } while ( $check->rowCount() > 0 );
-    
+
+    $account_dest = $_POST["account_dest"];
+    $apy = $_POST["apy"];
+
+    $balance = $_POST["balance"];
+    if($balance < 500) {
+        die(flash("Minimum balance not entered."));
+    }
+
+    $user = get_user_id();
+    $stmt = $db->prepare(
+        "INSERT INTO Accounts (account_number, user_id, account_type, balance, APY) VALUES (:account_number, :user, :account_type, :balance, :apy)"
+    );
+    $r = $stmt->execute([
+        ":account_number" => $account_number,
+        ":user" => $user,
+        ":account_type" => 'loan',
+        ":balance" => -($balance * ($apy / 100)), 
+        ":apy" => $apy
+    ]);
+    if ($r) {
+        changeBalance($db, $db->lastInsertId(), $account_dest, 'deposit', $balance, 'New account deposit');
+        flash("Account created successfully with Number: " . $account_number);
+        redirect("accounts.php");
+    } else {
+        flash("Error creating account!");
+    }
+    }
+?>
