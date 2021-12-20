@@ -12,3 +12,10 @@ $stmt = $db->prepare("SELECT * FROM Accounts WHERE user_id = :id AND account_typ
 $stmt->execute([':id' => $user]);
 $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+if (isset($_POST["save"])) {
+    $check = $db->prepare('SELECT account_number FROM Accounts WHERE account_number = :q');
+    do {
+      $account_number = rand(100000000000, 999999999999);
+      $check->execute([':q' => $account_number]);
+    } while ( $check->rowCount() > 0 );
+    
