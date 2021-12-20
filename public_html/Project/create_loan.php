@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../../partials/nav.php";
 if (!is_logged_in()) {
   flash("You don't have permission to access this page");
-  redirect("login.php");
+  die(header("Location: login.php"));
 }
 
 $user = get_user_id();
@@ -39,7 +39,7 @@ if (isset($_POST["save"])) {
         ":apy" => $apy
     ]);
     if ($r) {
-        changeBalance($db, $db->lastInsertId(), $account_dest, 'deposit', $balance, 'New account deposit');
+        changeBalance($db, $db->lastInsertId(), $account_dest, 'loan', $balance, 'New account deposit');
         flash("Account created successfully with Number: " . $account_number);
         redirect("accounts.php");
     } else {
