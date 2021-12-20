@@ -14,7 +14,7 @@ if (isset($_GET["type"])) {
 $user = get_user_id();
 $db = getDB();
 
-$stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id ORDER BY id ASC');
+$stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id AND active = 1 ORDER BY id ASC');
 $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
