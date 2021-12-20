@@ -100,6 +100,14 @@ function get_name()
   }
   return "";
 }
+
+function get_privacy()
+{
+  if (is_logged_in()) {
+    return se($_SESSION["user"], "privacy", "", false);
+  }
+  return "";
+} 
 //TODO 4: Flash Message Helpers
 function flash($msg = "", $color = "info")
 {

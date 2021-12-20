@@ -14,7 +14,7 @@ if (isset($_GET["type"])) {
 $user = get_user_id();
 $db = getDB();
 
-$stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id ORDER BY id ASC');
+$stmt = $db->prepare('SELECT * FROM Accounts WHERE user_id = :id AND active = 1 ORDER BY id ASC');
 $stmt->execute([':id' => $user]);
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -78,9 +78,11 @@ if (isset($_POST["save"])) {
     <label for="account"><?php echo $type == 'transfer' ? 'Account Source' : 'Account'; ?></label>
     <select class="form-control" id="account" name="<?php echo $type == 'transfer' ? 'account_src' : 'account'; ?>">
       <?php foreach ($results as $r): ?>
+      <?php if ($r["account_type"] != "loan"): ?>
       <option value="<?php echo($r["id"]); ?>">
         <?php echo($r["account_number"]); ?> | <?php echo($r["account_type"]); ?> | <?php echo($r["balance"]); ?>
       </option>
+      <?php endif; ?>
       <?php endforeach; ?>
     </select>
   </div>
