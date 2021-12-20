@@ -36,3 +36,22 @@ if (isset($_POST["save"])) {
     }
   }
 ?>
+
+<h3 class="text-center mt-4">Close Account</h3>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="account_dest">Account</label>
+    <select class="form-control" id="account" name="account">
+      <?php foreach ($accounts as $r): ?>
+      <option value="<?php echo($r["id"]); ?>">
+        <?php echo($r["account_number"]); ?> | <?php echo($r["account_type"]); ?> | <?php echo($r["balance"]); ?>
+      </option>
+      <?php endforeach; ?>
+    </select>
+    <small id="accountHelp" class="form-text text-muted">Account Balance has to be $0 in order to be closed.</small>
+  </div>
+  <button type="submit" name="save" value="close" class="btn btn-primary">Close</button>
+</form>
+
+<?php require __DIR__ . "/../../partials/flash.php"; ?>
