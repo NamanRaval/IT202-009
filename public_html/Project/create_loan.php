@@ -8,7 +8,7 @@ if (!is_logged_in()) {
 $user = get_user_id();
 $db = getDB();
 
-$stmt = $db->prepare("SELECT * FROM Accounts WHERE user_id = :id AND account_type NOT LIKE 'loan' ORDER BY id ASC");
+$stmt = $db->prepare("SELECT * FROM Accounts WHERE user_id = :id AND account_type NOT LIKE 'loan' AND active = 1 ORDER BY id ASC");
 $stmt->execute([':id' => $user]);
 $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -52,7 +52,7 @@ if (isset($_POST["save"])) {
 
 <form method="POST">
   <div class="form-group">
-    <label for="deposit">Loan Principal</label>
+    <label for="deposit">Loan Amount</label>
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">$</span>
