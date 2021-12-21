@@ -326,67 +326,95 @@
                 - Screenshot #4 Description: All error and success messages as well as "ext-transfer" included. 
 
 - Milestone 4
-    - [] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+    - [x] (12/14/2021) User can set their profile to be public or private (will need another column in Users table)
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/profile.php 
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/85
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146845151-33f67fd0-10d2-4656-89ff-e5d8b97e7571.png)
+                - Screenshot #1 Description: User can make profile public or private on profile page. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/146845227-e9b93787-73eb-44b7-9f92-6b16db582a22.png)
+                - Screenshot #2 Description: Public or private on USERS table. 
 
 
-    - [] (mm/dd/yyyy of completion) User will be able open a savings account
+    - [x] (12/14/2021) User will be able open a savings account
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_account.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/86
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146845406-b6ce730b-d565-4802-9319-e95c4a084467.png)
+                - Screenshot #1 Description: User can create a savings account. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/146845471-a3f41482-c460-4b6c-8743-1533e0af3081.png)
+                - Screenshot #2 Description: Redirects to accounts page. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/146845512-3bf988b9-7ea9-44e8-afc8-38110536122e.png)
+                - Screenshot #3 Description: Included on accounts page with APY at the bottom. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/146845638-4d3bdc5a-9d2a-4876-b6a5-1eb8bc117894.png)
+                - Screenshot #4 Description: Friendly error messages. 
 
 
-    - [] (mm/dd/yyyy of completion) User will be able to take out a loan
+    - [x] (12/20/2021) User will be able to take out a loan
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/create_loan.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/87
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146862175-17f2c4f8-65b5-45fc-a5b2-7149d0b46e93.png)
+                - Screenshot #1 Description: User can take out a loan with a minimum amount of $500 and a minimum APY of 2%. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/146862406-e701cf60-6dc3-4496-a248-95d7d9663393.png)
+                - Screenshot #2 Description: Dropdown of accounts. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/146862491-56b1f438-5e81-414f-82f3-dcd8a5b71dab.png)
+                - Screenshot #3 Description: Redirects to account page. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/146862570-987fa852-8d13-4634-b64d-8abac8dab7fe.png)
+                - Screenshot #4 Description: Shows up as a loan. 
+              - Screenshot #5: ![image](https://user-images.githubusercontent.com/90223403/146862646-62abd0b7-2e4f-4524-8e1c-8dc6f0ad2eb2.png)
+                - Screenshot #5 Description: Transaction history of loan account. 
+              - Screenshot #6: ![image](https://user-images.githubusercontent.com/90223403/146862774-95a0f06a-bfd7-439b-a10e-09bcef1f10e9.png)
+                - Screenshot #6 Description: Error message. 
 
-    - [] (mm/dd/yyyy of completion) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
+    - [x] (12/14/2021) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account (may alternatively just hide the display for these types)
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/accounts.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/86
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146863252-4f06744b-d92c-4d62-9cea-5df9da6f59bb.png)
+                - Screenshot #1 Description: APY included on accounts page. 
 
-    - [] (mm/dd/yyyy of completion) User will be able to close an account
+    - [x] (12/20/2021) User will be able to close an account
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/close_account.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/88
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description: 
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146863390-f18a4eb7-725a-4d4e-b6c5-737be3ea282b.png)
+                - Screenshot #1 Description: User can close account. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/146863441-7d38c1cc-709a-4d71-98eb-9aefba59c8c4.png)
+                - Screenshot #2 Description: Error messages. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/146863550-c5490b5e-ef04-47df-854c-fe52901361f3.png)
+                - Screenshot #3 Description: Success messages. 
+              - Screenshot #4: ![image](https://user-images.githubusercontent.com/90223403/146863710-1dadea10-df8f-4c5e-a447-0b7ba35218d4.png)
+                - Screenshot #4 Description: Account is not active anymore. 
 
-    - [] (mm/dd/yyyy of completion) Admin role (leave this section for last)
+    - [x] (11/26/2021) Admin role (leave this section for last)
         -  List of Evidence of Feature Completion
-            - Status: Pending (Completed, Partially working, Incomplete, Pending)
-            - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+            - Status: Completed
+            - Direct Link: https://nyr2-prod.herokuapp.com/Project/test_create_accounts.php
             - Pull Requests
-            - PR link #1: (repeat as necessary)
+            - PR link #1: https://github.com/NamanRaval/IT202-009/pull/55
             - Screenshots
-              - Screenshot #1:(paste the image so it uploads to github) (repeat as necessary)
-                - Screenshot #1 Description:
+              - Screenshot #1: ![image](https://user-images.githubusercontent.com/90223403/146864108-671a5d95-8cc8-4b38-8253-536bd87f09cd.png)
+                - Screenshot #1 Description: Admin finding user by first name. 
+              - Screenshot #2: ![image](https://user-images.githubusercontent.com/90223403/146864263-c1b97648-6fe7-41eb-a2ec-538249ecd7bd.png)
+                - Screenshot #2 Description: Looking up transaction history of an account. 
+              - Screenshot #3: ![image](https://user-images.githubusercontent.com/90223403/146864332-862fc124-b1e9-4c70-9958-38d0f53aa0e5.png)
+                - Screenshot #3 Description: Can create account. 
  
     
 ### Intructions
