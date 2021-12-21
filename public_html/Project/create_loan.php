@@ -48,7 +48,7 @@ if (isset($_POST["save"])) {
     }
 ?>
 
-<h3 class="text-center mt-4">Open a Loan</h3>
+<h3 class="text-center mt-4">Take out a Loan</h3>
 
 <form method="POST">
   <div class="form-group">
